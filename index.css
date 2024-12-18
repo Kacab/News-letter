@@ -9,12 +9,13 @@ body{
 
 .main{
     width: 570px;
-    border: 1px solid salmon;
+    /* border: 1px solid olive; */
     border-radius: 20px;
     height: 420px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.1);
     /* height: 100vh; */
 }
 
@@ -31,7 +32,7 @@ body{
 .side-1{
     width: 290px;
     height: 390px;
-    border: 1px solid blue;
+    /* border: 1px solid blue; */
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -65,8 +66,11 @@ ul {
 
 .email{
     width: 260px;
-    height: 100px;
-    border: 1px solid red;
+    height: 130px;
+    /* border: 1px solid red; */
+     display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 } 
 
 #email{
@@ -74,4 +78,36 @@ ul {
     height:40px ;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+#But{
+    border: 1px solid black;
+    width: 260px;
+    border-radius: 7px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+
+.lists {
+    list-style: none; /* Remove default bullets */
+    padding: 0; /* Remove padding */
+}
+
+.lists li {
+    position: relative;
+    padding-left: -15px; /* Space for the smaller SVG bullet */
+}
+
+.lists li::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Smaller size for the bullet */
+    height: 12px; /* Match width */
+    background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%2212%22 viewBox%3D%220 0 21 21%22%3E%3Cg fill%3D%22none%22%3E%3Ccircle cx%3D%2210.5%22 cy%3D%2210.5%22 r%3D%2210.5%22 fill%3D%22%23FF6155%22/%3E%3Cpath stroke%3D%22%23FFF%22 stroke-width%3D%222%22 d%3D%22M6 11.381 8.735 14 15 8%22/%3E%3C/g%3E%3C/svg%3E');
+    background-size: contain; /* Ensure the image scales */
+    background-repeat: no-repeat;
 }

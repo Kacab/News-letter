@@ -111,3 +111,28 @@ ul {
     background-size: contain; /* Ensure the image scales */
     background-repeat: no-repeat;
 }
+.thanks{
+    width: 270px;
+    height: 250px;
+    /* border: 1px solid blue; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    /* height: 100vh; */
+    position: absolute;
+   right:535px ;
+    display: none; 
+   background-color: white;
+   z-index: 99;
+   justify-content: space-evenly;
+   box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#But2{
+    border-radius: 5px;
+    width: 230px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+}

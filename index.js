@@ -8,6 +8,22 @@ const but2 =  document.querySelector('#But2')
 const thanks = document.querySelector('.thanks')
 let workable
 let notWorakble
+
+   function show(){
+   const checkEmail2 = gmail
+   const emailValue = gmail.value
+
+   if(emailRegex.test(emailValue)){
+    checkEmail2.style.color = "green"; 
+    console.log('validqqs')
+   }else{
+    console.log('not valid')
+     checkEmail2.style.color = 'red'
+     checkEmail2.style.border = "2px solid red";
+   }
+   }
+
+
 function getEmail(){
     const email =  document.createElement('span')
     email.innerText = gmail.value
@@ -25,7 +41,12 @@ function validateGmail(){
     but.disabled = false
   }else{
     // notWorakble = false
-    but.disabled = true
+    
+
+     but.disabled = true
+  // gmail.style.border = '1px solid red'
+  
+   
   }
 
 }
@@ -37,7 +58,12 @@ function validateGmail(){
 //  }
 //   validate2()
 
-gmail.addEventListener('input',validateGmail)
+gmail.addEventListener('input',function(){
+  validateGmail()
+   show()
+})
+ 
+
 
 but2.addEventListener('click',function(){
     thanks.remove()
@@ -45,6 +71,7 @@ but2.addEventListener('click',function(){
 })
 
 but.addEventListener('click',function(){
+  
     thanks.style.display = 'block' 
     thanks.style.display = 'flex'
     main.remove()
@@ -52,5 +79,6 @@ but.addEventListener('click',function(){
  getEmail()
 //  validateGmail()
 //    validate2()
+ 
 
 })

@@ -157,36 +157,43 @@ ul {
    } 
    
    .main{
-    width: 500px;
+    /* width: 500px; */
     border: 1px solid red;
+    /* height: 1000px; */
+    width: 500px;
     height: 1000px;
-    
+    display: flex;
+    flex-direction: column;
 
    }
 
    .all-sides{
     width: 500px;
-    height: 800px;
     border: 1px solid green;
+    height: 1000px;
     display: flex;
     flex-direction: column;
+
    }
    .side-1{
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-   
+    
+   width: 500px;
     border: 1px solid orange;
+    order: 2;
+    
+   }
+   .side-2{
+    width: 500px;
+    border: 1 px solid black;
+    order: 1;
     
    }
    .stay{
-    display: flex;
-    flex-direction: column;
-    width: 230px;
+    
     border: 1px solid magenta;
 
    }
-   .email{
+   /* .email{
     width: 500px;
-   }
+   } */
 }

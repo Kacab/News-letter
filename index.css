@@ -154,6 +154,10 @@ ul {
     margin: 0;
     /* display: flex;
     flex-direction: column; */
+    display: block; /* Change display from flex to block */
+    justify-content: unset; /* Remove centering */
+    align-items: unset; /* Remove centering */
+    /* Allow height to expand naturally */
    } 
    
    .main{

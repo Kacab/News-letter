@@ -8,6 +8,7 @@ const but2 =  document.querySelector('#But2')
 const thanks = document.querySelector('.thanks')
 let workable
 let notWorakble
+const span2 =  document.querySelector('#span2')
 
    function show(){
    const checkEmail2 = gmail
@@ -15,11 +16,15 @@ let notWorakble
 
    if(emailRegex.test(emailValue)){
     checkEmail2.style.color = "green"; 
+    span2.style.display = 'none'
     console.log('validqqs')
    }else{
     console.log('not valid')
      checkEmail2.style.color = 'red'
-     checkEmail2.style.border = "2px solid red";
+     span2.style.color = 'red'
+     span2.style.display = 'block'
+   
+     
    }
    }
 
@@ -77,7 +82,7 @@ but.addEventListener('click',function(){
     main.remove()
 
  getEmail()
-//  validateGmail()
+  validateGmail()
 //    validate2()
  
 

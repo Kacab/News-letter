@@ -122,15 +122,15 @@ ul {
     background-size: contain; /* Ensure the image scales */
     background-repeat: no-repeat;
 }
-.thanks{
+/* .thanks{
     width: 270px;
     height: 250px;
-    /* border: 1px solid blue; */
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    /* height: 100vh; */
+    
     position: absolute;
    right:535px ;
     display: none; 
@@ -146,69 +146,259 @@ ul {
     padding: 8px;
     background-color: black;
     color: white;
-}
+} */
 
-@media(max-width:500px){
-    *{
+@media screen and (max-width:480px){
+
+
+    * {
+       
         padding: 0;
         margin: 0;
+        box-sizing: border-box; /* Includes padding and border in the element's width */
     }
-   body{
+
+    body {
+        
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        overflow-x: hidden; /* Prevents horizontal scrolling */
+        /* background-color: #e81010; */
+    }
+
+    .main {
+        display: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .all-sides {
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        display: none;
+    }
+
+    .side-1, .side-2 {
+        display: none;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-1 {
+        display: none;
+        order: 2;
+    }
+
+    .side-2 {
+        display: none;
+        order: 1;
+        height: auto; /* Let content dictate height */
+        border: 1px solid red;
+    }
+
+    .stay {
+        display: none;
+        width: 100%;
+        height: 200px;
+        border: 1px solid orange;
+    }
+
+    ul {
+        display: none;
+        margin: 0 15px; /* Maintain horizontal space */
+        padding: 0;
+    }
+
+    li {
+        display: none;
+        margin-bottom: 10px;
+    }
+
+    .email {
+        display: none;
+        width: 100%;
+        max-width: 270px; /* Ensure flexibility */
+        height: auto;
+    }
+
+    .lists {
+        display: none;
+        list-style: none;
+        padding: 0;
+    }
+
+    .lists li {
+        display: none;
+        background-color: aqua;
+        position: relative;
+        padding: 10px;
+    }
+
+    .lists li::before {
+        display: none;
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px;
+        height: 12px;
+        background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%2212%22 viewBox%3D%220 0 21 21%22%3E%3Cg fill%3D%22none%22%3E%3Ccircle cx%3D%2210.5%22 cy%3D%2210.5%22 r%3D%2210.5%22 fill%3D%22%23FF6155%22/%3E%3Cpath stroke%3D%22%23FFF%22 stroke-width%3D%222%22 d%3D%22M6 11.381 8.735 14 15 8%22/%3E%3C/g%3E%3C/svg%3E');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+
+
+
+   
+/* *{
     padding: 0;
     margin: 0;
-    /* display: flex;
-    flex-direction: column; */
-    display: block; /* Change display from flex to block */
-    justify-content: unset; /* Remove centering */
-    align-items: unset; /* Remove centering */
-    height: auto; /* Allow height to expand naturally */
-   } 
-   
-   .main{
-    /* width: 500px; */
-    border: 2px solid red;
-    /* height: 1000px; */
-    width: 500px;
-    /* height: 1000px; */
+}
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        width: 100%;
+        background-color: #e81010;
+}
+
+.main {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    border-radius: unset;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0;
+    box-shadow: none;
+}
 
-   }
-
-   .all-sides{
-    width: 500px;
-    border: 1px solid green;
-    /* height: 1000px; */
+.all-sides {
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
-    border-radius: unset;
+    justify-content: unset;
+}
 
-   }
-   .side-1{
-    
-   width: 500px;
-    border: 1px solid orange;
-    display: none;
+.side-1, .side-2 {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    order: unset;
+}
+
+.side-1 {
     order: 2;
-    border-radius: unset;
-    
-   }
-   .side-2{
-    width: 500px;
-    border: 1px solid black;
-    order: 1;
-    /* height: 600px; */
-    display: none;
-    border-radius: unset;
-    
-   }
-   .stay{
-    
-    border: 1px solid magenta;
+}
 
-   }
-   /* .email{
-    width: 500px;
-   } */
+.side-2 {
+    order: 1;
+    height: 407px;
+    border: 1px solid red;
+}
+
+.stay {
+    width: 100%;
+    height: 200px;
+    border: 1px solid orange;
+}
+
+ul {
+    margin: 15px;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.email {
+    width: 100%;
+    max-width: 270px;
+    height: auto;
+}
+
+.lists {
+    list-style: none;
+    padding: 0;
+}
+
+
+.lists li {
+    background-color: aqua;
+    position: relative;
+    padding: 10px;
+}
+
+
+
+.lists li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background-image: url('data:image/svg+xml;utf8,%3Csvg xmlns%3D%22http%3A//www.w3.org/2000/svg%22 width%3D%2212%22 height%3D%2212%22 viewBox%3D%220 0 21 21%22%3E%3Cg fill%3D%22none%22%3E%3Ccircle cx%3D%2210.5%22 cy%3D%2210.5%22 r%3D%2210.5%22 fill%3D%22%23FF6155%22/%3E%3Cpath stroke%3D%22%23FFF%22 stroke-width%3D%222%22 d%3D%22M6 11.381 8.735 14 15 8%22/%3E%3C/g%3E%3C/svg%3E');
+    background-size: contain;
+    background-repeat: no-repeat;
+} */
+
+/* .thanks {
+    width: 100%;
+    max-width: 270px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 40px;
+    top: 270px;
+    background-color: white;
+    z-index: 99;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+     display: none; 
+}
+
+#But2 {
+    border-radius: 5px;
+    width: 100%;
+    max-width: 230px;
+    padding: 8px;
+    background-color: black;
+    color: white;
+    text-align: center;
+} */
+
+
+
+
+
 }

@@ -137,7 +137,7 @@ ul {
     
     position: absolute;
    right:535px ;
-    /* display: none;  */
+    display: none; 
    background-color: white;
    z-index: 99;
    justify-content: space-evenly;
